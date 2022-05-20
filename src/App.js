@@ -1,8 +1,4 @@
-import logo from "./logo.svg";
 import "./App.css";
-
-{/* <Card/> */}
-{/* <ProductCard product={product} */}
 
 function App() {
   return (
