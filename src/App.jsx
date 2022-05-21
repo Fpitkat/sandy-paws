@@ -14,7 +14,26 @@ function App() {
       <Hero />
       <Services />
       <Testimonials />
-      <Team />
+      <div className="team--box">
+        <img className="section--heading" src="Images/MeetOurVets.png" alt="" />
+        <div className="team--container">
+          <Team
+            img="/Images/Dr. Sands_head shot.JPEG"
+            name="Dr. Michelle Sands"
+            title="Owner Veterinarian"
+          />
+          <Team
+            img="Images/DrDanaFrandsen.jpeg"
+            name="Dr. Dana Frandsen"
+            title="Associate Veterinarian"
+          />
+          <Team
+            img="Images/Dr. Page_ head shot.JPG"
+            name="Dr. Claire Page"
+            title="Associate Veterinarian"
+          />
+        </div>
+      </div>
       <Contact />
       <Footer />
     </div>

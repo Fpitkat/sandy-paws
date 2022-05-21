@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="hero--text">
         <p className="hero--title">
           Welcome to Sandy Paws{" "}
-          <span className="text--secondary">Animal Hospital</span>
+          <span className="text--secondary after">Animal Hospital</span>
         </p>
         <p className="hero--content">
           Sandy Paws Animal Hospital is a full-service veterinary hospital that

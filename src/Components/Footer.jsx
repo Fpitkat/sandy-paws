@@ -48,7 +48,9 @@ export default function Footer() {
       <div className="footer--contact">
         <p className="footer--contact--title">Contact</p>
         <ul className="nav--footer">
-          <li className="nav--item">Contact</li>
+          <li className="nav--item">
+            <strong>Contact</strong>
+          </li>
           <li className="nav--item">Book Appointment</li>
           <li className="nav--item">Register your pet</li>
         </ul>
