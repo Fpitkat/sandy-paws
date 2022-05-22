@@ -17,7 +17,7 @@ body {
 }
 
 .section--heading {
-  width: 500px;
+  width: 400px;
   padding-bottom: 2rem;
 }
 
@@ -86,7 +86,12 @@ body {
   letter-spacing: 1.2px;
 }
 
-.text--secondary {
+#message {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.hero--type {
   color: #982118;
   position: relative;
 }
@@ -120,6 +125,19 @@ body {
   font-size: 1.5rem;
   font-weight: 800;
 }
+
+/* .text--dynamic {
+  position: relative;
+} */
+
+/* .text--dynamic::after {
+  content: "";
+  position: absolute;
+  margin-left: 5px;
+  width: 2px;
+  height: 100%;
+  animation: blink 300ms ease infinite;
+} */
 
 /* SERVICE SECTION */
 
