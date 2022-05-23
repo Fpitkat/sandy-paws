@@ -6,9 +6,9 @@ export default function Header() {
         src="/Images/logo.png"
         alt="sandy paws logo"
       ></img>
-      <nav className="nav--container container">
+      <nav className="nav--container container sticky">
         <ul>
-          <li className="nav--item">HOME</li>
+          <li className="nav--item nav--selected">HOME</li>
           <li className="nav--item">TEAM</li>
           <li className="nav--item">SERVICES</li>
           <li className="nav--item">TESTIMONIALS</li>
