@@ -233,6 +233,7 @@ body {
 
 .testimonial--star {
   width: 80%;
+  padding-top: 0.5rem;
 }
 
 .testimonial--location {
@@ -315,7 +316,7 @@ body {
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: 1.5;
-  color: #982118;
+  color: #151d3b;
 }
 
 .team--dr-title {
@@ -338,6 +339,7 @@ body {
 
 .contact--form {
   background-color: 1px solid orange;
+  width: 50%;
 }
 
 form {

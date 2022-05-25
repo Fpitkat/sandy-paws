@@ -6,9 +6,9 @@ export default function Testimonials(props) {
           <img className="testimonial--img" src={props.img} alt="" />
         </div>
         <div>
-          <img className="testimonial--star" src={props.star} alt="" />
           <p className="testimonial--name">{props.name}</p>
           <p className="testimonial--location">{props.location}</p>
+          <img className="testimonial--star" src={props.star} alt="" />
         </div>
       </div>
 

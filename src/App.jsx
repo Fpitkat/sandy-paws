@@ -61,21 +61,21 @@ function App() {
           <Testimonials
             img="./Images/Ginger Guthrie.png"
             star="./Images/5-start.png"
-            name="Ginger Guthrie"
+            name="Ginger G"
             location="Jacksonville, Florida"
             testimonial="I made an appointment at a different vet's office and ended up at this one by accident. I absolutely love the entire staff!"
           />
           <Testimonials
             img="./Images/Lynn Muller.png"
             star="./Images/5-start.png"
-            name="Lynn Muller"
+            name="Lynn M"
             location="Jacksonville, Florida"
             testimonial="Very caring doctor and techs. We have had Royce treat him since we got him as a rescue dog 7 years ago."
           />
           <Testimonials
             img="./Images/Michael Hickman.png"
             star="./Images/5-start.png"
-            name="Michael Hickman"
+            name="Michael H"
             location="Jacksonville, Florida"
             testimonial="Awesome first visit!! Such friendly, helpful, knowledgeable staff. Very kind, informative, non pushy Doctors.. Very clean and organized facility. Highly recommend!"
           />
@@ -91,12 +91,12 @@ function App() {
             title="Owner Veterinarian"
           />
           <Team
-            img="Images/DrDanaFrandsen.jpeg"
+            img="/Images/DrDanaFrandsen.jpeg"
             name="Dr. Dana Frandsen"
             title="Associate Veterinarian"
           />
           <Team
-            img="Images/Dr. Page_ head shot.JPG"
+            img="/Images/Dr. Page_ head shot.JPG"
             name="Dr. Claire Page"
             title="Associate Veterinarian"
           />
