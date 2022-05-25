@@ -10,15 +10,14 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  max-width: 93.75rem;
+  max-width: 90rem;
   margin: 0 auto;
   background-color: #ddd;
   color: #1f1f1f;
 }
 
 .section--heading {
-  width: 25rem;
-  padding-bottom: 1rem;
+  height: 8rem;
 }
 
 .header {
@@ -50,7 +49,11 @@ body {
   font-weight: 800;
   align-items: center;
   padding-right: 2em;
+}
+
+.nav--container li {
   position: relative;
+  cursor: pointer;
 }
 
 .contact {
@@ -63,11 +66,11 @@ body {
 .nav--selected::after {
   content: "";
   position: absolute;
-  top: 2.9rem;
+  top: 2rem;
   height: 8px;
-  width: 4rem;
+  width: 100%;
   background: #982118;
-  left: 2rem;
+  left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
 }
@@ -77,6 +80,7 @@ body {
 .hero--section {
   display: flex;
   background-image: url("/public/Images/Hero.png");
+  /* max-width: 100%; */
   background-color: #c9dadc;
   background-size: cover;
   background-repeat: no-repeat;
@@ -94,7 +98,7 @@ body {
 
 .hero--title {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.2;
   letter-spacing: 1.2px;
 }
@@ -120,7 +124,7 @@ body {
   border: 5px solid #fff;
   text-align: center;
   line-height: 1;
-  background-color: #982118;
+  background-color: #151d3b;
   padding: 1rem 3.5rem;
   border-radius: 10px;
 }
@@ -143,14 +147,15 @@ body {
   background-size: 75% 75%;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: contain; */
 }
 
-.service--container {
+.service--container,
+.testimonial--container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding-top: 1.5rem;
 }
 
 .service--card {
@@ -162,14 +167,14 @@ body {
   margin-bottom: 3rem;
   border-radius: 1.25rem;
   border: 8px solid #f1f1f1;
-  background-color: #c9dadc;
+  background-color: #c9dadc99;
 
   transition: all 0.4s;
 }
 
 .service--card:hover {
   transform: translateY(-1.1rem);
-  background-color: #fdfeff;
+  background-color: #fdfeff96;
 }
 
 .service--icon {
@@ -192,6 +197,79 @@ body {
   text-align: center;
 }
 
+/* TESTIMONIAL SECTION */
+
+.testimonial--box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c9dadc;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+.Testimonial--card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #fffefd;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  position: relative;
+  border-radius: 1.25rem;
+  border: 8px solid #f1f1f1;
+}
+
+.testimonial--img {
+  width: 6.25rem;
+}
+
+.testimonial--name {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.testimonial--star {
+  width: 80%;
+}
+
+.testimonial--location {
+  color: #acaaaa;
+  font-size: 0.85rem;
+}
+
+.testimonial-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.testimonial--google {
+  align-self: flex-end;
+  position: absolute;
+  top: 85%;
+  left: 85%;
+  width: 40px;
+}
+
+.testimonial--text {
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+
+.testimonial--heart {
+  align-self: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 7rem;
+}
+
 /* TEAM SECTION */
 
 .team--box {
@@ -207,8 +285,9 @@ body {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #a7c7cc;
-  padding: 1rem 0;
 }
 
 .team--cards {
@@ -218,7 +297,7 @@ body {
   width: 35%;
   padding: 0.75rem;
   border: 8px solid #f1f1f1;
-  background-color: #c9dadc;
+  background-color: #fffefd;
   border-radius: 20px;
 }
 
@@ -236,15 +315,60 @@ body {
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: 1.5;
+  color: #982118;
 }
 
 .team--dr-title {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 400;
-  width: 40%;
+  width: 80%;
   text-align: center;
 }
 
+/* CONTACT SECTION */
+
+.contact-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #c9dadc;
+  gap: 20%;
+  padding: 3rem 0;
+  border: 1px solid green;
+}
+
+.contact--form {
+  background-color: 1px solid orange;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+label {
+}
+
+input {
+  height: 2rem;
+  width: 10rem;
+  padding-left: 10px;
+  border: 0;
+  margin-left: 2rem;
+}
+
+.contact--map--section {
+  width: 50%;
+  align-self: center;
+  border: 1px solid red;
+}
+
+.contact--map {
+  width: 75%;
+  border: 1px solid blue;
+}
 /* FOOTER SECTION */
 
 footer {

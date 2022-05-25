@@ -49,7 +49,39 @@ function App() {
           />
         </div>
       </div>
-      <Testimonials />
+
+      <div className="testimonial--box">
+        <img
+          className="section--heading"
+          src="./Images/Testimonial--Header.png"
+          alt=""
+        />
+
+        <div className="testimonial--container">
+          <Testimonials
+            img="./Images/Ginger Guthrie.png"
+            star="./Images/5-start.png"
+            name="Ginger Guthrie"
+            location="Jacksonville, Florida"
+            testimonial="I made an appointment at a different vet's office and ended up at this one by accident. I absolutely love the entire staff!"
+          />
+          <Testimonials
+            img="./Images/Lynn Muller.png"
+            star="./Images/5-start.png"
+            name="Lynn Muller"
+            location="Jacksonville, Florida"
+            testimonial="Very caring doctor and techs. We have had Royce treat him since we got him as a rescue dog 7 years ago."
+          />
+          <Testimonials
+            img="./Images/Michael Hickman.png"
+            star="./Images/5-start.png"
+            name="Michael Hickman"
+            location="Jacksonville, Florida"
+            testimonial="Awesome first visit!! Such friendly, helpful, knowledgeable staff. Very kind, informative, non pushy Doctors.. Very clean and organized facility. Highly recommend!"
+          />
+        </div>
+      </div>
+
       <div className="team--box">
         <img className="section--heading" src="Images/MeetOurVets.png" alt="" />
         <div className="team--container">
