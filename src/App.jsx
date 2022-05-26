@@ -52,6 +52,66 @@ function App() {
     ),
   ];
 
+  function TestimonialFactory(img, star, name, location, testimonial) {
+    return {
+      img,
+      star,
+      name,
+      location,
+      testimonial,
+    };
+  }
+
+  const TestimonialData = [
+    TestimonialFactory(
+      "./Images/Ginger Guthrie.png",
+      "./Images/5-start.png",
+      "Ginger G",
+      "Jacksonville, Florida",
+      "I made an appointment at a different vet's office and ended up at this one by accident. I absolutely love the entire staff!"
+    ),
+    TestimonialFactory(
+      "./Images/Lynn Muller.png",
+      "./Images/5-start.png",
+      "Lynn M",
+      "Jacksonville, Florida",
+      "Very caring doctor and techs. We have had Royce treat him since we got him as a rescue dog 7 years ago."
+    ),
+    TestimonialFactory(
+      "./Images/Michael Hickman.png",
+      "./Images/5-start.png",
+      "Michael H",
+      "Jacksonville, Florida",
+      "Awesome first visit!! Such friendly, helpful, knowledgeable staff. Very kind, informative, non pushy Doctors.. Very clean and organized facility. Highly recommend!"
+    ),
+  ];
+
+  function TeamFactory(img, name, title) {
+    return {
+      img,
+      name,
+      title,
+    };
+  }
+
+  const TeamData = [
+    TeamFactory(
+      "/Images/Dr. Sands_head shot.JPEG",
+      "Dr. Michelle Sands",
+      "Owner Veterinarian"
+    ),
+    TeamFactory(
+      "/Images/DrDanaFrandsen.jpeg",
+      "Dr. Dana Frandsen",
+      "Associate Veterinarian"
+    ),
+    TeamFactory(
+      "/Images/Dr. Page_ head shot.JPG",
+      "Dr. Claire Page",
+      "Associate Veterinarian"
+    ),
+  ];
+
   return (
     <div className="App">
       <Header />
@@ -74,48 +134,18 @@ function App() {
         />
 
         <div className="testimonial--container">
-          <Testimonials
-            img="./Images/Ginger Guthrie.png"
-            star="./Images/5-start.png"
-            name="Ginger G"
-            location="Jacksonville, Florida"
-            testimonial="I made an appointment at a different vet's office and ended up at this one by accident. I absolutely love the entire staff!"
-          />
-          <Testimonials
-            img="./Images/Lynn Muller.png"
-            star="./Images/5-start.png"
-            name="Lynn M"
-            location="Jacksonville, Florida"
-            testimonial="Very caring doctor and techs. We have had Royce treat him since we got him as a rescue dog 7 years ago."
-          />
-          <Testimonials
-            img="./Images/Michael Hickman.png"
-            star="./Images/5-start.png"
-            name="Michael H"
-            location="Jacksonville, Florida"
-            testimonial="Awesome first visit!! Such friendly, helpful, knowledgeable staff. Very kind, informative, non pushy Doctors.. Very clean and organized facility. Highly recommend!"
-          />
+          {TestimonialData.map((Testimonial, i) => (
+            <Testimonials key={i} {...Testimonial} />
+          ))}
         </div>
       </div>
 
       <div className="team--box">
         <img className="section--heading" src="Images/MeetOurVets.png" alt="" />
         <div className="team--container">
-          <Team
-            img="/Images/Dr. Sands_head shot.JPEG"
-            name="Dr. Michelle Sands"
-            title="Owner Veterinarian"
-          />
-          <Team
-            img="/Images/DrDanaFrandsen.jpeg"
-            name="Dr. Dana Frandsen"
-            title="Associate Veterinarian"
-          />
-          <Team
-            img="/Images/Dr. Page_ head shot.JPG"
-            name="Dr. Claire Page"
-            title="Associate Veterinarian"
-          />
+          {TeamData.map((team, i) => (
+            <Team key={i} {...team} />
+          ))}
         </div>
       </div>
       <Contact />

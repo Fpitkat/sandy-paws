@@ -12,11 +12,11 @@ export default function Hero() {
                 let typewriterMessages = [
                   "Animal Hospital",
                   "offers Wellness Exams",
-                  "offers routine vaccines",
-                  "offers dental cleanings",
-                  "offers diagnostic services",
-                  "offers surgical services",
-                  "offers Cold laser therapy",
+                  "offers routine Vaccinations",
+                  "offers Dental Cleanings",
+                  "offers Diagnostic Services",
+                  "offers Surgical Services",
+                  "offers Cold Laser Therapy",
                   "Animal Hospital",
                 ];
 

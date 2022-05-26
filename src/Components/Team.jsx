@@ -1,9 +1,9 @@
-export default function Team(props) {
+export default function Team({ img, name, title }) {
   return (
     <div className="team--cards">
-      <img className="team--img" src={props.img} alt={props.name} />
-      <p className="team--dr--name">{props.name}</p>
-      <p className="team--dr-title">{props.title}</p>
+      <img className="team--img" src={img} alt={name} />
+      <p className="team--dr--name">{name}</p>
+      <p className="team--dr-title">{title}</p>
     </div>
   );
 }
