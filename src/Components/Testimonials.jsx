@@ -11,7 +11,6 @@ export default function Testimonials(props) {
           <img className="testimonial--star" src={props.star} alt="" />
         </div>
       </div>
-
       <div>
         <p className="testimonial--text">{props.testimonial}</p>
       </div>

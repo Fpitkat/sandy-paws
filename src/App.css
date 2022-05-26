@@ -130,9 +130,9 @@ body {
 }
 
 .hero--book:hover {
-  color: #982118;
+  color: #151d3b;
   background-color: transparent;
-  border-color: #982118;
+  border-color: #151d3b;
 }
 
 /* SERVICE SECTION */
@@ -348,9 +348,6 @@ form {
   gap: 20px;
   justify-content: space-around;
   align-items: flex-end;
-}
-
-label {
 }
 
 input {

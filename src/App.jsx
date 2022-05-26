@@ -2,13 +2,56 @@ import "./App.css";
 
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
-import Services from "./Components/Service";
+import Service from "./Components/Service";
 import Testimonials from "./Components/Testimonials";
 import Team from "./Components/Team";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 
 function App() {
+  function ServiceFactory(icon, title, description) {
+    return {
+      icon,
+      title,
+      description,
+    };
+  }
+
+  const ServiceData = [
+    ServiceFactory(
+      "./Images/Medical Doctor.png",
+      "Wellness exams",
+      "At Sandy Paws Animal Hospital we feel that a healthy pet is a happy pet! Our community has entrusted us with the care of their pets for almost 20 years. We are passionate about our work - and your pets - lifelong healthcare. "
+    ),
+    ServiceFactory(
+      "./Images/Catheter.png",
+      "Vaccinations",
+      "Sandy Paws Animal Hospital offers routine vaccines, which includes Canine Rabies, Distemper, Parvo, Leptospirosis and Bordetella. Also, feline Rabies, FVRCP, and Leukemia."
+    ),
+    ServiceFactory(
+      "./Images/Toothache.png",
+      "Dentistry",
+
+      "Caring for your pet’s teeth and gums is about much more than simply controlling bad breath or enhancing their appearance. We offer routine cleanings with dental radiographs, and extractions if needed."
+    ),
+    ServiceFactory(
+      "./Images/Stethoscope.png",
+      "Diagnostics",
+
+      "Sandy Paws Animal Hospital offers a wide range of in-house diagnostic services such as bloodwork, radiographs, ultrasound, ear & skin cytologies, biopsy’s, urinalysis, blood pressure and much more!"
+    ),
+    ServiceFactory(
+      "./Images/Clinic.png",
+      "Surgery",
+      "Sandy Paws Animal Hospital offers a wide range of surgical services for your pet such as spay, neuter, mass removal, cystotomy, orthopedic, and much more."
+    ),
+    ServiceFactory(
+      "./Images/Laser Beam.png",
+      "Cold laser therapy",
+      "Cold laser therapy is a noninvasive procedure that uses light to stimulate cell regeneration and increase blood circulation. It helps with wounds, lameness, post surgical, IVDD, and much more."
+    ),
+  ];
+
   return (
     <div className="App">
       <Header />
@@ -17,36 +60,9 @@ function App() {
         <img className="section--heading" src="Images/PetServices.png" alt="" />
 
         <div className="service--container">
-          <Services
-            icon="./Images/Medical Doctor.png"
-            title="Wellness exams"
-            description="At Sandy Paws Animal Hospital we feel that a healthy pet is a happy pet! Our community has entrusted us with the care of their pets for almost 20 years. We are passionate about our work - and your pets - lifelong healthcare. "
-          />
-          <Services
-            icon="./Images/Catheter.png"
-            title="Vaccinations"
-            description="Sandy Paws Animal Hospital offers routine vaccines, which includes Canine Rabies, Distemper, Parvo, Leptospirosis and Bordetella. Also, feline Rabies, FVRCP, and Leukemia."
-          />
-          <Services
-            icon="./Images/Toothache.png"
-            title="Dentistry"
-            description="Caring for your pet’s teeth and gums is about much more than simply controlling bad breath or enhancing their appearance. We offer routine cleanings with dental radiographs, and extractions if needed."
-          />
-          <Services
-            icon="./Images/Stethoscope.png"
-            title="Diagnostics"
-            description="Sandy Paws Animal Hospital offers a wide range of in-house diagnostic services such as bloodwork, radiographs, ultrasound, ear & skin cytologies, biopsy’s, urinalysis, blood pressure and much more!"
-          />
-          <Services
-            icon="./Images/Clinic.png"
-            title="Surgery"
-            description="Sandy Paws Animal Hospital offers a wide range of surgical services for your pet such as spay, neuter, mass removal, cystotomy, orthopedic, and much more."
-          />
-          <Services
-            icon="./Images/Laser Beam.png"
-            title="Cold laser therapy"
-            description="Cold laser therapy is a noninvasive procedure that uses light to stimulate cell regeneration and increase blood circulation. It helps with wounds, lameness, post surgical, IVDD, and much more. "
-          />
+          {ServiceData.map((service, i) => (
+            <Service key={i} {...service} />
+          ))}
         </div>
       </div>
 

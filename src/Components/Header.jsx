@@ -1,9 +1,7 @@
+import { useState } from "react";
 export default function Header() {
-  // const navigationLinks = document.getElementsByClassName("nav--item");
-
-  // function onHover(event) {
-  //   navigationLinks.classList.add("nav--selected");
-  // }
+  const [selectedIndex, setSelectedIndex] = useState(2);
+  const selections = ["HOME", "TEAM", "SERVICES", "TESTIMONIALS"];
 
   return (
     <header className="header container">
@@ -14,10 +12,20 @@ export default function Header() {
       ></img>
       <nav className="nav--container container sticky">
         <ul>
-          <li className="nav--item nav--selected">HOME</li>
-          <li className="nav--item ">TEAM</li>
-          <li className="nav--item ">SERVICES</li>
-          <li className="nav--item ">TESTIMONIALS</li>
+          {selections.map((_selection, i) => {
+            return (
+              <li
+                key={i}
+                onClick={() => setSelectedIndex(i)}
+                className={`nav--item btn--nav ${
+                  i === selectedIndex ? "nav--selected" : ""
+                }`}
+              >
+                {_selection}
+              </li>
+            );
+          })}
+
           <li className="nav--item contact">CONTACT</li>
         </ul>
       </nav>

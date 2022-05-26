@@ -4,40 +4,32 @@ export default function Hero() {
   return (
     <section className="hero--section">
       <div className="hero--text">
-        <p className="hero--title">
+        <div className="hero--title">
           Welcome to Sandy Paws
           <span className="hero--type">
             <TypewriterComponent
               onInit={(typewriter) => {
-                typewriter
-                  .typeString("Animal Hospital")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("offers Wellness Exams")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("offers routine vaccines")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("offers dental cleanings")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("offers diagnostic services")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("offers surgical services")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("offers Cold laser therapy")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("Animal Hospital")
-                  .pauseFor(1000)
-                  .start();
+                let typewriterMessages = [
+                  "Animal Hospital",
+                  "offers Wellness Exams",
+                  "offers routine vaccines",
+                  "offers dental cleanings",
+                  "offers diagnostic services",
+                  "offers surgical services",
+                  "offers Cold laser therapy",
+                  "Animal Hospital",
+                ];
+
+                typewriterMessages.forEach((message, messageIndex) => {
+                  typewriter.typeString(message).pauseFor(1000);
+                  if (messageIndex !== typewriterMessages.length - 1)
+                    typewriter.deleteAll();
+                });
+                typewriter.start();
               }}
             />
           </span>
-        </p>
+        </div>
         <p className="hero--content">
           Sandy Paws Animal Hospital is a full-service veterinary hospital that
           provides preventative, medical, surgical, dental, and hospitalized

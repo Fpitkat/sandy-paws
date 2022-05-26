@@ -10,7 +10,7 @@ export default function Contact() {
               type="text"
               value=""
               placeholder="Name"
-              onChange=""
+              onChange={() => console.log("Phone changed!")}
             />
           </label>
 
@@ -21,7 +21,7 @@ export default function Contact() {
               type="email"
               value=""
               placeholder="Email"
-              onChange=""
+              onChange={() => console.log("Phone changed!")}
             />
           </label>
 
@@ -32,7 +32,7 @@ export default function Contact() {
               type="phone"
               value=""
               placeholder="Phone"
-              onChange=""
+              onChange={() => console.log("Phone changed!")}
             />
           </label>
 
@@ -49,7 +49,11 @@ export default function Contact() {
         </form>
       </div>
       <div className="contact--map--section">
-        <img className="contact--map" src="./Images/map.png" />
+        <img
+          className="contact--map"
+          alt="map our location"
+          src="./Images/map.png"
+        />
       </div>
     </div>
   );
