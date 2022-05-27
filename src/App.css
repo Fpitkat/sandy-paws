@@ -403,6 +403,7 @@ textarea {
   padding: 0.5rem 1rem;
   margin: auto;
   -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   justify-self: center;
