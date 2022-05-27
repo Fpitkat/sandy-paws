@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Footer from "./Footer";
 
 const GoogleMapView = () => (
   <div className="contact--map--section">
@@ -7,8 +6,8 @@ const GoogleMapView = () => (
       title="map-view"
       className="contact--map"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.8246960163715!2d-81.70788478441241!3d30.185001281831376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5c700c1e8d22d%3A0x1788d4530be1ec01!2sSandy%20Paws%20Animal%20Hospital!5e0!3m2!1sen!2sus!4v1653666951490!5m2!1sen!2sus"
-      width="750"
-      height="550"
+      width="800"
+      height="400"
       style={{ border: "0" }}
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
@@ -100,14 +99,22 @@ export default function Contact() {
               onClick={submitHandler}
             />
           </form>
-          {formSubmitted ? <div>Thank you</div> : <></>}
-          <div className="contact--social">
+
+          {/* <div className="contact--social">
             <img src="./Images/Facebook_white.png" alt="facebook" />
             <img src="./Images/Insta.png" alt="instagram" />
             <img src="./Images/Google_white.png" alt="google" />
             <img src="./Images/linkedin.png" alt="linkedin" />
-          </div>
-          <p className="company--phone">Phone: (904) 278-0600</p>
+          </div> */}
+          {/* <p className="company--phone">Phone: (904) 278-0600</p> */}
+          {formSubmitted ? (
+            <div className="thankyou">
+              Thank you! We have received your request and will call you within
+              48 hours.
+            </div>
+          ) : (
+            <div className="thankyou"></div>
+          )}
         </div>
 
         <GoogleMapView />
