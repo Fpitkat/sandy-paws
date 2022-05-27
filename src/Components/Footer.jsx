@@ -38,7 +38,9 @@ export default function Footer() {
 
   const FooterContact = () => (
     <ul className="nav--footer">
-      <li className="nav--item">Contact</li>
+      <li className="nav--item">
+        <strong>Contact</strong>
+      </li>
       <li className="nav--item">Book Appointment</li>
       <li className="nav--item">Register your pet</li>
     </ul>

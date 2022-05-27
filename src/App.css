@@ -12,7 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
   max-width: 90rem;
   margin: 0 auto;
-  background-color: #ddd;
+  background-color: #c9dadc95;
   color: #1f1f1f;
 }
 
@@ -113,26 +113,25 @@ body {
   padding-top: 1.5rem;
   font-size: 1.5rem;
   font-weight: 400;
-  /* line-height: 1.5; */
 }
 
 .hero--book {
   font-size: 1.5rem;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   display: inline-block;
   color: #fff;
-  border: 5px solid #fff;
+  border: 3px solid #fff;
   text-align: center;
   line-height: 1;
-  background-color: #151d3b;
+  background-color: #0e3b43;
   padding: 1rem 3.5rem;
   border-radius: 10px;
 }
 
 .hero--book:hover {
-  color: #151d3b;
+  color: #0e3b43;
   background-color: transparent;
-  border-color: #151d3b;
+  border-color: #0e3b43;
 }
 
 /* SERVICE SECTION */
@@ -316,7 +315,7 @@ body {
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: 1.5;
-  color: #151d3b;
+  color: #0e3b43;
 }
 
 .team--dr-title {
@@ -328,46 +327,97 @@ body {
 
 /* CONTACT SECTION */
 
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 3rem;
+  background-color: #c9dadc;
+  align-items: center;
+}
+
 .contact-box {
   display: flex;
   flex-direction: row;
-  background-color: #c9dadc;
-  gap: 20%;
-  padding: 3rem 0;
-  border: 1px solid green;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: 5rem;
+  padding: 1rem 0;
+  border: 1px sold red;
 }
 
 .contact--form {
-  background-color: 1px solid orange;
-  width: 50%;
+  max-width: 50%;
+  justify-self: flex-start;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: space-around;
   align-items: flex-end;
+}
+
+.input--container {
+  display: flex;
+  align-items: center;
+  text-align: left;
 }
 
 input {
   height: 2rem;
-  width: 10rem;
+  width: 20rem;
   padding-left: 10px;
   border: 0;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  /* border-radius: 5px; */
+}
+label {
+  font-weight: 600;
 }
 
-.contact--map--section {
-  width: 50%;
-  align-self: center;
-  border: 1px solid red;
+input:focus {
+  background-color: lightyellow;
 }
 
-.contact--map {
-  width: 75%;
-  border: 1px solid blue;
+textarea {
+  width: 100%;
+  height: 5rem;
+  padding: 10px;
+  border: none;
 }
+
+#btn--submit {
+  display: block;
+  width: 85%;
+  background-color: #0e3b43;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  -webkit-box-sizing: content-box;
+  border-radius: 10px;
+}
+
+textarea:focus {
+  background-color: lightyellow;
+}
+
+.contact--social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 2rem;
+}
+
+.company--phone {
+  text-align: center;
+  padding-top: 4rem;
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+
 /* FOOTER SECTION */
 
 footer {
@@ -421,7 +471,7 @@ footer {
 .footer--social {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  gap: 1rem;
   padding-top: 1rem;
 }
 
