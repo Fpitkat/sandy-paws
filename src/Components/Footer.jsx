@@ -64,7 +64,9 @@ export default function Footer() {
         <p>550 Wells Road</p>
         <p>Suite 17</p>
         <p>Orange Park, FL 32073</p>
+        <p>(904) 278-0600</p>
       </div>
+
       <div className="footer--menu">
         <p className="footer--menu--title">Menu</p>
         <nav className="nav--footer container">

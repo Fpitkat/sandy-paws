@@ -59,7 +59,7 @@ export default function Contact() {
                 className="input--box"
                 type="text"
                 value={name}
-                placeholder="Name"
+                placeholder="name"
                 onChange={nameChangeHandler}
               />
             </div>
@@ -70,7 +70,7 @@ export default function Contact() {
                 className="input--box"
                 type="email"
                 value={email}
-                placeholder="Email"
+                placeholder="email"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -81,7 +81,7 @@ export default function Contact() {
                 className="input--box"
                 type="phone"
                 value={phone}
-                placeholder="Phone"
+                placeholder="phone"
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
@@ -106,7 +106,7 @@ export default function Contact() {
             <img src="./Images/Google_white.png" alt="google" />
             <img src="./Images/linkedin.png" alt="linkedin" />
           </div> */}
-          {/* <p className="company--phone">Phone: (904) 278-0600</p> */}
+
           {formSubmitted ? (
             <div className="thankyou">
               Thank you! We have received your request and will call you within
@@ -116,7 +116,6 @@ export default function Contact() {
             <div className="thankyou"></div>
           )}
         </div>
-
         <GoogleMapView />
       </div>
     </div>

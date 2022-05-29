@@ -66,21 +66,21 @@ function App() {
     TestimonialFactory(
       "./Images/Ginger Guthrie.png",
       "./Images/5-start.png",
-      "Ginger G",
+      "Ginger G.",
       "Jacksonville, Florida",
       "I made an appointment at a different vet's office and ended up at this one by accident. I absolutely love the entire staff!"
     ),
     TestimonialFactory(
       "./Images/Lynn Muller.png",
       "./Images/5-start.png",
-      "Lynn M",
+      "Lynn M.",
       "Jacksonville, Florida",
       "Very caring doctor and techs. We have had Royce treat him since we got him as a rescue dog 7 years ago."
     ),
     TestimonialFactory(
       "./Images/Michael Hickman.png",
       "./Images/5-start.png",
-      "Michael H",
+      "Michael H.",
       "Jacksonville, Florida",
       "Awesome first visit!! Such friendly, helpful, knowledgeable staff. Very kind, informative, non pushy Doctors.. Very clean and organized facility. Highly recommend!"
     ),
