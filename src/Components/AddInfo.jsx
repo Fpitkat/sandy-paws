@@ -11,6 +11,7 @@ export default function AddInfo() {
   const [extrahands, setExtraHands] = useState("");
   const [sedation, setSedation] = useState("");
   const [muzzle, setMuzzle] = useState("");
+  const [aggressive, setIsAggressive] = useState("");
 
   return (
     <section className="add--info--section">
@@ -45,6 +46,14 @@ export default function AddInfo() {
             </label>
           </div>
           <div>
+            <label>
+              Anxious/Aggressive
+              <input
+                type="checkbox"
+                value={aggressive}
+                onChange={(e) => setIsAggressive(e.target.value)}
+              />
+            </label>
             <label>
               Requires an extra pair of hands at the vet's office
               <input
