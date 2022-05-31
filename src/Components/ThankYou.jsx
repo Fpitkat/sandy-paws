@@ -6,7 +6,7 @@ export default function ThankYou() {
         <p>Thanks For Registering Your Pet(s)</p>
         <p>
           Thanks for getting in touch with us! We’ll get back to you as soon as
-          we can
+          we can.
         </p>
       </div>
       <button className="btn back--btn">Back</button>

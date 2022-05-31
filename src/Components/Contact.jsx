@@ -79,7 +79,7 @@ export default function Contact() {
               <label>Phone:</label>
               <input
                 className="input--box"
-                type="phone"
+                type="tel"
                 value={phone}
                 placeholder="phone"
                 onChange={(e) => setPhone(e.target.value)}

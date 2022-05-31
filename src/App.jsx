@@ -7,7 +7,6 @@ import Testimonials from "./Components/Testimonials";
 import Team from "./Components/Team";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-// import PetInfo from "./PetInfo";
 
 function App() {
   function ServiceFactory(icon, title, description) {
