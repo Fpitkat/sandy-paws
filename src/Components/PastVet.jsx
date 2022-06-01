@@ -9,7 +9,7 @@ export default function PetVet() {
     <section className="past--vet--section">
       <div className="past--vet">
         <p className="section---heading">
-          <span className="first-word">Past Veterinary</span> Details
+          <span className="first-word">Past Veterinary</span>
         </p>
         <div>
           <p>

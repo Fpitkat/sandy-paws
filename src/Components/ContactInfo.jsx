@@ -11,7 +11,7 @@ export default function ContactInfo() {
     <section className="contact--info--section">
       <div className="contact--info">
         <p className="section---heading">
-          <span className="first-word">Client</span> Details
+          <span className="first-word">Client</span>
         </p>
         <div className="three--cols">
           <div>

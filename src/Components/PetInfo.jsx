@@ -14,7 +14,7 @@ export default function PetInfo() {
     <section className="pet--info--section">
       <div className="pet--info">
         <p className="section---heading">
-          <span className="first-word">Pet</span> Details
+          <span className="first-word">Pet</span>
         </p>
         <div className="pet-name">
           <label htmlFor="name">Name:</label>

@@ -17,7 +17,7 @@ export default function AddInfo() {
     <section className="add--info--section">
       <div className="add--info">
         <p className="section---heading">
-          <span className="first-word">Additional</span> Details
+          <span className="first-word">Additional</span>
         </p>
         <p className="question">Mood</p>
         <div className="two--cols">
@@ -140,6 +140,9 @@ export default function AddInfo() {
           </select>
         </div>
       </div>
+      <p className="center">
+        For additional pets please click the New Pet button below.
+      </p>
       <div className="Register--btn">
         <p className="btn hero--book">New Pet</p>
         <p className="btn hero--book">Submit</p>

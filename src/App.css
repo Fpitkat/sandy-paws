@@ -565,9 +565,10 @@ footer {
 }
 
 .first-word {
-  color: #0e3b43;
+  color: #982118;
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .question,
@@ -663,4 +664,15 @@ input[type="option"]::file-selector-button {
   flex-direction: row;
   justify-content: space-evenly;
   padding-bottom: 2rem;
+}
+
+.center {
+  text-align: center;
+  color: #982118;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.checkbox:checked:before {
+  background-color: green;
 }
