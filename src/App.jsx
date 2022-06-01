@@ -7,6 +7,10 @@ import Testimonials from "./Components/Testimonials";
 import Team from "./Components/Team";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import AddInfo from "./Components/AddInfo";
+import ContactInfo from "./Components/ContactInfo";
+import PastVet from "./Components/PastVet";
+import PetInfo from "./Components/PetInfo";
 
 function App() {
   function ServiceFactory(icon, title, description) {
@@ -150,6 +154,10 @@ function App() {
       </div>
       <Contact />
       <Footer />
+      <ContactInfo />
+      <PetInfo />
+      <PastVet />
+      <AddInfo />
     </div>
   );
 }

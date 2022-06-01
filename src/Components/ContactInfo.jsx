@@ -9,58 +9,81 @@ export default function ContactInfo() {
 
   return (
     <section className="contact--info--section">
-      <p>Pet Information</p>
-      <form>
-        <div className="contact--info">
+      <div className="contact--info">
+        <p className="section---heading">
+          <span className="first-word">Client</span> Details
+        </p>
+        <div className="three--cols">
           <div>
-            <label htmlFor="first-name">First Name:</label>
+            <label htmlFor="first-name">First:</label>
             <input
+              placeholder="First Name"
               id="first-name"
+              className="input--box"
               name="first-name"
               value={firstname}
               onChange={(e) => setFirstName(e.target.value)}
               type="text"
+              required
             />
-            <label htmlFor="last-name">Last Name:</label>
+
+            <label className="left" htmlFor="last-name">
+              Last:
+            </label>
             <input
+              placeholder="Last Name"
               id="last-name"
+              className="input--box"
               name="last-name"
               value={lastname}
               onChange={(e) => setLastName(e.target.value)}
               type="text"
+              required
             />
           </div>
 
           <div>
             <label htmlFor="phone">Phone:</label>
             <input
+              placeholder="Phone Number"
               id="phone"
               name="phone"
+              className="input--box"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               type="tel"
+              required
             />
-            <label htmlFor="email">Email:</label>
+
+            <label className="left" htmlFor="email">
+              Email:
+            </label>
             <input
+              placeholder="email"
               id="email"
+              className="input--box"
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
+              required
             />
           </div>
+
           <div>
             <label htmlFor="address">Address:</label>
             <input
+              placeholder="Address"
               id="address"
+              className="input--box"
               name="address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              type="date"
+              type="address"
             />
           </div>
         </div>
-      </form>
+      </div>
     </section>
   );
 }

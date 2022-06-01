@@ -1,11 +1,16 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
+  box-sizing: border-box;
   font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -45,7 +50,6 @@ body {
   list-style: none;
   gap: 2.875rem;
   font-size: 1.25em;
-  line-height: 2.25rem;
   font-weight: 800;
   align-items: center;
   padding-right: 2em;
@@ -110,8 +114,8 @@ body {
 }
 
 .hero--content {
-  padding-top: 1.5rem;
-  font-size: 1.5rem;
+  padding-top: 1.25rem;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
@@ -177,7 +181,6 @@ body {
 
 .service--icon {
   align-self: center;
-  /* width: 3rem; */
 }
 
 .service--title {
@@ -189,7 +192,7 @@ body {
 }
 
 .service--description {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 400;
   padding-top: 1rem;
   text-align: center;
@@ -212,7 +215,7 @@ body {
   flex-direction: column;
   width: 30%;
   background-color: #fffefd;
-  padding: 1.5rem;
+  padding: 2.5rem;
   position: relative;
   border-radius: 1.25rem;
   border: 8px solid #f1f1f1;
@@ -253,8 +256,8 @@ body {
 
 .testimonial--text {
   padding-top: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.75rem;
+  font-size: 1em;
+  line-height: 1.5rem;
   font-weight: 400;
 }
 
@@ -385,20 +388,16 @@ form {
   text-align: left;
 }
 
-input {
+.input--box {
   height: 2rem;
   width: 20rem;
   padding-left: 10px;
   border: 0;
-
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   outline: none;
-}
-label {
-  font-weight: 400;
-  color: #0e3b43;
+  font-size: 1rem;
 }
 
 input:focus {
@@ -428,6 +427,7 @@ textarea {
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   justify-self: center;
+  border: none;
 }
 
 textarea:focus {
@@ -520,4 +520,147 @@ footer {
 
 .socail-icon {
   width: 2rem;
+}
+
+/* PET REGISTRATION SECTION */
+
+.add--info--section,
+.contact--info--section,
+.past--vet--section,
+.pet--info--section {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #a7c7cc;
+  border: 8px solid #f1f1f1;
+}
+
+.two--cols {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.three--cols {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  justify-items: center;
+}
+
+.add--info,
+.contact--info,
+.past--vet,
+.pet--info {
+  padding: 2rem 4rem;
+}
+
+.section---heading {
+  font-weight: 800 !important;
+  font-size: 2rem;
+  color: #982118;
+  padding-bottom: 1rem;
+  /* padding: 0; */
+}
+
+.first-word {
+  color: #0e3b43;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.question,
+.past--vet p {
+  padding: 0.5rem 0;
+  font-weight: bold;
+  /* font-weight: 600; */
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+input[type="file"]::file-selector-button {
+  border: 2px solid #c9dadc;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #eee;
+  transition: 1s;
+  font-weight: 600;
+  width: 50%;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  /* color: #fff; */
+}
+
+input[type="option"]::file-selector-button {
+  border: 2px solid #c9dadc;
+  padding: 0.2em 0.75em;
+  border-radius: 0.2em;
+  margin-right: 1rem;
+  background-color: #eee;
+  transition: 1s;
+  font-weight: 600;
+  width: 50%;
+}
+
+#dropDown {
+  height: 2rem;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+.three--cols label,
+.pet--info--section label,
+.contact--home label {
+  display: inline-block;
+  font-weight: 600;
+  color: #0e3b43;
+  width: 95px;
+  text-align: left;
+}
+
+.left {
+  padding-left: 25px;
+}
+
+#address {
+  width: 45.85rem;
+}
+
+.past--vet {
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-name,
+.pet-species,
+.pet-weight,
+.pet-species,
+.pet-spay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 1rem; */
+}
+
+.pet--info,
+.contact--info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Register--btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
 }

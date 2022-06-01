@@ -15,73 +15,81 @@ export default function AddInfo() {
 
   return (
     <section className="add--info--section">
-      <p>Pet Information</p>
       <div className="add--info">
-        <p>Additional Information</p>
-        <div>
+        <p className="section---heading">
+          <span className="first-word">Additional</span> Details
+        </p>
+        <p className="question">Mood</p>
+        <div className="two--cols">
           <div>
             <label>
-              Friendly
               <input
                 type="checkbox"
                 value={isfriend}
                 onChange={(e) => setIsfriend(e.target.value)}
               />
+              Friendly
             </label>
+            <br />
             <label>
-              Will bite or scratch when picked up
               <input
                 type="checkbox"
                 value={willbite}
                 onChange={(e) => setWillBite(e.target.value)}
               />
+              Will bite or scratch when picked up
             </label>
+            <br />
             <label>
-              Hides when around strangers
               <input
                 type="checkbox"
                 value={hides}
                 onChange={(e) => setHides(e.target.value)}
               />
+              Hides when around strangers
             </label>
+            <br />
           </div>
           <div>
             <label>
-              Anxious/Aggressive
               <input
                 type="checkbox"
                 value={aggressive}
                 onChange={(e) => setIsAggressive(e.target.value)}
               />
+              Anxious/Aggressive
             </label>
+            <br />
             <label>
-              Requires an extra pair of hands at the vet's office
               <input
                 type="checkbox"
                 value={extrahands}
                 onChange={(e) => setExtraHands(e.target.value)}
               />
+              Requires an extra pair of hands at the vet's office
             </label>
+            <br />
             <label>
-              May need sedation
               <input
                 type="checkbox"
                 value={sedation}
                 onChange={(e) => setSedation(e.target.value)}
               />
+              May need sedation
             </label>
+            <br />
             <label>
-              Needs a muzzle
               <input
                 type="checkbox"
                 value={muzzle}
                 onChange={(e) => setMuzzle(e.target.value)}
               />
+              Needs a muzzle
             </label>
           </div>
         </div>
         <div>
-          <p>
+          <p className="question">
             Please feel free to share any other additional information about
             your pet
             <textarea
@@ -91,27 +99,33 @@ export default function AddInfo() {
           </p>
         </div>
         <div>
-          <p>Please upload an up-to-date photo of your pet if available</p>
+          <p className="question">
+            Please upload an up-to-date photo of your pet if available
+          </p>
           <input
+            className="file--upload"
             value={uploadphoto}
             type="file"
             onChange={(e) => setUploadPhoto(e.target.value)}
           />
         </div>
         <div>
-          <p>
+          <p className="question">
             Reason for Visit
             <textarea
               onChange={(e) => setVisitReason(e.target.value)}
               value={visitreason}
+              required
             ></textarea>
           </p>
         </div>
         <div>
-          <p>Referred by:</p>
+          <p className="question">Referred by:</p>
           <select
+            id="dropDown"
             value={referred}
             onChange={(e) => setReferred(e.target.value)}
+            required
           >
             <option value="select">Select</option>
             <option value="internet">Internet Search</option>
@@ -125,6 +139,10 @@ export default function AddInfo() {
             <option value="past-client">Previous Client</option>
           </select>
         </div>
+      </div>
+      <div className="Register--btn">
+        <p className="btn hero--book">New Pet</p>
+        <p className="btn hero--book">Submit</p>
       </div>
     </section>
   );
