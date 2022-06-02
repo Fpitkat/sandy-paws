@@ -672,7 +672,3 @@ input[type="option"]::file-selector-button {
   font-size: 1rem;
   font-weight: 600;
 }
-
-.checkbox:checked:before {
-  background-color: green;
-}
