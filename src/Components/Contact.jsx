@@ -41,7 +41,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact">
       <img
         className="section--heading"
         src="./Images/contact-section.png"

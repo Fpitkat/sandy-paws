@@ -1,15 +1,22 @@
 import { useState } from "react";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
+
 export default function Header() {
   const [selectedIndex, setSelectedIndex] = useState(2);
   const selections = ["HOME", "TEAM", "SERVICES", "TESTIMONIALS"];
+  let navigate = useNavigate();
 
   return (
-    <header className="header container">
+    <header className="header container" id="home">
       <img
+        onClick={() => navigate("/#home")}
         className="header--logo"
         src="/Images/logo.png"
         alt="sandy paws logo"
       ></img>
+
       <nav className="nav--container container sticky">
         <ul>
           {selections.map((_selection, i) => {
@@ -21,12 +28,14 @@ export default function Header() {
                   i === selectedIndex ? "nav--selected" : ""
                 }`}
               >
-                {_selection}
+                <Link to={`/#${_selection.toLowerCase()}`}>{_selection}</Link>
               </li>
             );
           })}
 
-          <li className="nav--item contact">CONTACT</li>
+          <Link to="/#contact">
+            <li className="nav--item contact">CONTACT</li>
+          </Link>
         </ul>
       </nav>
     </header>

@@ -3,7 +3,7 @@
 // };
 export default function Service({ icon, title, description }) {
   return (
-    <div className="service--card">
+    <div className="service--card" id="services">
       <img className="service--icon" src={icon} alt="" />
       <p className="service--title">{title}</p>
       <p className="service--description">{description}</p>

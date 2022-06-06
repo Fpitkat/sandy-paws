@@ -1,4 +1,5 @@
 import TypewriterComponent from "typewriter-effect";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -35,7 +36,9 @@ export default function Hero() {
           provides preventative, medical, surgical, dental, and hospitalized
           care for your pet.
         </p>
-        <p className="btn hero--book">Book your Appointment</p>
+        <Link to="/register">
+          <p className="btn hero--book">Book your Appointment</p>
+        </Link>
       </div>
     </section>
   );

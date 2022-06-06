@@ -7,10 +7,8 @@ import Testimonials from "./Components/Testimonials";
 import Team from "./Components/Team";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-import AddInfo from "./Components/AddInfo";
-import ContactInfo from "./Components/ContactInfo";
-import PastVet from "./Components/PastVet";
-import PetInfo from "./Components/PetInfo";
+import RegisterPet from "./Components/RegisterPet";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   function ServiceFactory(icon, title, description) {
@@ -116,49 +114,70 @@ function App() {
     ),
   ];
 
+  const IndexPage = () => {
+    return (
+      <div>
+        <Hero />
+        <div className="service--section">
+          <img
+            id="services"
+            className="section--heading"
+            src="Images/PetServices.png"
+            alt=""
+          />
+
+          <div className="service--container">
+            {ServiceData.map((service, i) => (
+              <Service key={i} {...service} />
+            ))}
+          </div>
+        </div>
+
+        <div className="testimonial--box">
+          <img
+            id="testimonials"
+            className="section--heading"
+            src="./Images/Testimonial--Header.png"
+            alt=""
+          />
+
+          <div className="testimonial--container">
+            {TestimonialData.map((Testimonial, i) => (
+              <Testimonials key={i} {...Testimonial} />
+            ))}
+          </div>
+        </div>
+
+        <div className="team--box">
+          <img
+            id="team"
+            className="section--heading"
+            src="Images/MeetOurVets.png"
+            alt=""
+          />
+          <div className="team--container">
+            {TeamData.map((team, i) => (
+              <Team key={i} {...team} />
+            ))}
+          </div>
+        </div>
+        <Contact />
+      </div>
+    );
+  };
+
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <div className="service--section">
-        <img className="section--heading" src="Images/PetServices.png" alt="" />
-
-        <div className="service--container">
-          {ServiceData.map((service, i) => (
-            <Service key={i} {...service} />
-          ))}
-        </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route index element={<IndexPage />}></Route>
+          <Route path="/test" element={<h1>test</h1>}></Route>
+          <Route path="/register" element={<RegisterPet />}></Route>
+        </Routes>
+        <Footer />
       </div>
-
-      <div className="testimonial--box">
-        <img
-          className="section--heading"
-          src="./Images/Testimonial--Header.png"
-          alt=""
-        />
-
-        <div className="testimonial--container">
-          {TestimonialData.map((Testimonial, i) => (
-            <Testimonials key={i} {...Testimonial} />
-          ))}
-        </div>
-      </div>
-
-      <div className="team--box">
-        <img className="section--heading" src="Images/MeetOurVets.png" alt="" />
-        <div className="team--container">
-          {TeamData.map((team, i) => (
-            <Team key={i} {...team} />
-          ))}
-        </div>
-      </div>
-      <Contact />
-      <Footer />
-      <ContactInfo />
-      <PetInfo />
-      <PastVet />
-      <AddInfo />
-    </div>
+    </Router>
   );
 }
 

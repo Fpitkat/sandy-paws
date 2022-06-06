@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -42,6 +43,7 @@ body {
   padding: 0.75em;
   margin-right: auto;
   width: 15.5rem;
+  cursor: pointer;
 }
 
 .nav--container ul {
@@ -53,6 +55,20 @@ body {
   font-weight: 800;
   align-items: center;
   padding-right: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #151d3b;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav--container ul a:visited {
+  text-decoration: none;
 }
 
 .nav--container li {
@@ -671,4 +687,12 @@ input[type="option"]::file-selector-button {
   color: #982118;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.Register-pet {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0rem;
+  background-color: #c9dadc;
 }

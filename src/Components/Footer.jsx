@@ -1,4 +1,8 @@
+import { HashLink as Link } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
+
 export default function Footer() {
+  let navigate = useNavigate();
   const MySocialIcon = (props) => (
     <img className="socail-icon" src={`/Images/${props.src}`} alt={props.alt} />
   );
@@ -29,20 +33,32 @@ export default function Footer() {
 
   const FootNav = () => (
     <ul>
-      <li>Home</li>
-      <li>Team</li>
-      <li>Services</li>
-      <li>Testimonials</li>
+      <Link to="/#home">
+        <li>Home</li>
+      </Link>
+
+      <Link to="/#team">
+        <li>Team</li>
+      </Link>
+
+      <Link to="/#services">
+        <li>Services</li>
+      </Link>
+
+      <Link to="/#testimonials">
+        <li>Testimonials</li>
+      </Link>
     </ul>
   );
 
   const FooterContact = () => (
     <ul className="nav--footer">
       <li className="nav--item">
-        <strong>Contact</strong>
+        <Link to="/#contact">Contact</Link>
       </li>
-      <li className="nav--item">Book Appointment</li>
-      <li className="nav--item">Register your pet</li>
+      <Link to="/register#home">
+        <li className="nav--item">Book Appointment</li>
+      </Link>
     </ul>
   );
 
@@ -76,11 +92,13 @@ export default function Footer() {
       <div className="footer--contact">
         <p className="footer--contact--title">Contact</p>
         <FooterContact />
-        <img
-          className="footer--logo"
-          src="/Images/logo.png"
-          alt="sandy paws logo"
-        ></img>
+        <Link to="/#home">
+          <img
+            className="footer--logo"
+            src="/Images/logo.png"
+            alt="sandy paws logo"
+          ></img>
+        </Link>
         <div className="footer--social">
           <MySocialIcon src="Facebook_white.png" alt="facebook" />
           <MySocialIcon src="Insta.png" alt="instagram" />
