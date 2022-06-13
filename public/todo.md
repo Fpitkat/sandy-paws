@@ -1,11 +1,11 @@
 # Todo (with Ryan)
 
-1. Site favicon
+1. Responsive site
 2. Refactor Code
-3. Contact us section - home page / add google map
-4. Register Pet page
-5. React Router
-6. Sticky Header
+3. Mobile Nav
+4. Sticky Header
+5. Section Heading image to text for SEO
+6. Integrate TYPOGRAPHY, Spacing system throughout site
 
 /\*
 --- 01 TYPOGRAPHY SYSTEM
@@ -34,11 +34,8 @@
 
 - Primary:
 - Secondary:
-
 - Tints:
-
 - Shades:
-
 - Accents:
 - Greys
 
@@ -76,8 +73,6 @@ Brand color: #e67e22
 ### features
 
 ### How it works
-
-[Show big app images]
 
 ### Customer testimonials
 

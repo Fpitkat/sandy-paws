@@ -34,7 +34,7 @@ export default function Footer() {
   const FootNav = () => (
     <ul>
       <Link to="/#home">
-        <li>Home</li>
+        <li className="footer-nav">Home</li>
       </Link>
 
       <Link to="/#team">

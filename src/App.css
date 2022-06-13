@@ -64,7 +64,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #982118;
 }
 
 .nav--container ul a:visited {
@@ -323,7 +323,7 @@ a:hover {
   height: 21.75rem;
   object-fit: cover;
   border: none;
-  z-index: 2;
+
   border-radius: 10px;
 }
 
@@ -484,10 +484,13 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   background-color: #a7c7cc;
-  font-size: 1.1rem;
   font-weight: 400;
   padding-bottom: 1.5rem;
   padding-top: 2em;
+}
+
+footer ul {
+  font-size: 1rem;
 }
 
 .footer--hours--title,
@@ -496,12 +499,12 @@ footer {
 .footer--contact--title {
   color: #982118;
   font-weight: 900;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
   text-decoration: underline;
   text-underline-offset: 7px;
-  text-decoration-color: #151d3b;
-  text-decoration-thickness: 3px;
+  text-decoration-color: #c9dadc;
+  text-decoration-thickness: 4px;
 }
 
 .footer--hours--schedule {
@@ -544,7 +547,7 @@ footer {
 .contact--info--section,
 .past--vet--section,
 .pet--info--section {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   background-color: #a7c7cc;
   border: 8px solid #f1f1f1;
@@ -695,4 +698,23 @@ input[type="option"]::file-selector-button {
   gap: 2rem;
   padding: 2rem 0rem;
   background-color: #c9dadc;
+}
+
+.add--new {
+  padding: 1rem 10rem;
+  background-color: #0e3b43;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+.add--submit {
+  padding: 1rem 10rem;
+  background-color: #982118;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
 }

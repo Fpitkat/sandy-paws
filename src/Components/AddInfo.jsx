@@ -144,8 +144,8 @@ export default function AddInfo() {
         For additional pets please click the New Pet button below.
       </p>
       <div className="Register--btn">
-        <p className="btn hero--book">New Pet</p>
-        <p className="btn hero--book">Submit</p>
+        <p className="btn add--new">ADD PET</p>
+        <p className="btn add--submit">SUBMIT</p>
       </div>
     </section>
   );

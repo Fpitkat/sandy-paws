@@ -13,10 +13,10 @@ export default function Hero() {
                 let typewriterMessages = [
                   "Animal Hospital",
                   "offers Wellness Exams",
-                  "offers routine Vaccinations",
+                  "offers Routine Vaccinations",
                   "offers Dental Cleanings",
                   "offers Diagnostic Services",
-                  "offers Surgical Services",
+                  "offers Surgical Procedures",
                   "offers Cold Laser Therapy",
                   "Animal Hospital",
                 ];
@@ -34,10 +34,11 @@ export default function Hero() {
         <p className="hero--content">
           Sandy Paws Animal Hospital is a full-service veterinary hospital that
           provides preventative, medical, surgical, dental, and hospitalized
-          care for your pet.
+          care for your pet. Book your appointment today, and allow us to exceed
+          your expectations.
         </p>
         <Link to="/register">
-          <p className="btn hero--book">Book your Appointment</p>
+          <p className="btn hero--book">Book your Appointment Now</p>
         </Link>
       </div>
     </section>
