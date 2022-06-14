@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Form from "./Form";
 
 const GoogleMapView = () => (
   <div className="contact--map--section">
@@ -28,15 +29,27 @@ export default function Contact() {
 
   function submitHandler(e) {
     e.preventDefault();
-    setName("");
-    setEmail("");
-    setPhone("");
-    setText("");
-    fetch("../../public/send_email.php", { name, email, phone, text }).then(
-      (res) => {
-        console.log(res);
-      }
-    );
+
+    fetch("http://localhost:8080/API/index.php", {
+      method: "POST",
+      body: JSON.stringify({
+        name: "test",
+        email,
+        phone,
+        text,
+      }), // body data type must match "Content-Type" header
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+
+        setName("");
+        setEmail("");
+        setPhone("");
+        setText("");
+      });
     setFormSubmitted(true);
   }
 
@@ -48,74 +61,76 @@ export default function Contact() {
         alt=""
       />
       <div className="contact-box">
-        <div className="contact--form">
-          <form className="contact--home">
-            <div className="contact--cells"></div>
+        <Form>
+          <div className="contact--form">
+            <form className="contact--home">
+              <div className="contact--cells"></div>
 
-            <div className="input--container">
-              <label>Name:</label>
+              <div className="input--container">
+                <label>Name:</label>
+                <input
+                  name="name"
+                  className="input--box"
+                  type="text"
+                  value={name}
+                  placeholder="name"
+                  onChange={nameChangeHandler}
+                />
+              </div>
+
+              <div className="input--container">
+                <label>Email:</label>
+                <input
+                  className="input--box"
+                  type="email"
+                  value={email}
+                  placeholder="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+
+              <div className="input--container">
+                <label>Phone:</label>
+                <input
+                  className="input--box"
+                  type="tel"
+                  value={phone}
+                  placeholder="phone"
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+
+              <textarea
+                placeholder="How can we help you?"
+                onChange={(e) => setText(e.target.value)}
+                value={text}
+              ></textarea>
+
               <input
-                name="name"
-                className="input--box"
-                type="text"
-                value={name}
-                placeholder="name"
-                onChange={nameChangeHandler}
+                id="btn--submit"
+                type="submit"
+                value="Submit"
+                onClick={submitHandler}
               />
-            </div>
-
-            <div className="input--container">
-              <label>Email:</label>
-              <input
-                className="input--box"
-                type="email"
-                value={email}
-                placeholder="email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-
-            <div className="input--container">
-              <label>Phone:</label>
-              <input
-                className="input--box"
-                type="tel"
-                value={phone}
-                placeholder="phone"
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </div>
-
-            <textarea
-              placeholder="How can we help you?"
-              onChange={(e) => setText(e.target.value)}
-              value={text}
-            ></textarea>
-
-            <input
-              id="btn--submit"
-              type="submit"
-              value="Submit"
-              onClick={submitHandler}
-            />
-          </form>
-
-          {/* <div className="contact--social">
+            </form>
+            {/* <div className="contact--social">
             <img src="./Images/Facebook_white.png" alt="facebook" />
             <img src="./Images/Insta.png" alt="instagram" />
             <img src="./Images/Google_white.png" alt="google" />
             <img src="./Images/linkedin.png" alt="linkedin" />
           </div> */}
 
-          {formSubmitted ? (
-            <div className="thankyou">
-              Thank you! We have received your request and will call you within
-              48 hours.
-            </div>
-          ) : (
-            <div className="thankyou"></div>
-          )}
-        </div>
+            {formSubmitted ? (
+              <div className="thankyou">
+                Thank you! We have received your request and will call you
+                within 48 hours.
+              </div>
+            ) : (
+              <div className="thankyou"></div>
+            )}
+          </div>
+        </Form>
+
         <GoogleMapView />
       </div>
     </div>
