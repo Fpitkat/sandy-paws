@@ -15,8 +15,10 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
+
   max-width: 90rem;
+  width: 100%;
   margin: 0 auto;
   background-color: #c9dadc95;
   color: #1f1f1f;
@@ -42,7 +44,7 @@ body {
 .header--logo {
   padding: 0.75em;
   margin-right: auto;
-  width: 15.5rem;
+  height: 6rem;
   cursor: pointer;
 }
 
@@ -84,7 +86,7 @@ a:hover {
 }
 
 .nav--selected::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 2rem;
   height: 8px;
@@ -99,11 +101,12 @@ a:hover {
 
 .hero--section {
   display: flex;
-  background-image: url("/public/Images/Hero.png");
-  /* max-width: 100%; */
+  background-image: url('/public/Images/Hero.png');
+
   background-color: #c9dadc;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
   margin: 0 auto;
   height: 35rem;
   position: relative;
@@ -162,7 +165,7 @@ a:hover {
   align-items: center;
   background-color: #a7c7cc;
   padding: 1rem 0;
-  background-image: url("/public/Images/paw--big.png");
+  background-image: url('/public/Images/paw--big.png');
   background-size: 75% 75%;
   background-repeat: no-repeat;
   background-position: center;
@@ -267,7 +270,7 @@ a:hover {
   position: absolute;
   top: 85%;
   left: 85%;
-  width: 40px;
+  width: 2.5rem;
 }
 
 .testimonial--text {
@@ -315,15 +318,14 @@ a:hover {
   padding: 1.5rem;
   border: 8px solid #f1f1f1;
   background-color: #fffefd;
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 .team--img {
-  width: 21.75rem;
-  height: 21.75rem;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   border: none;
-
   border-radius: 10px;
 }
 
@@ -354,12 +356,12 @@ a:hover {
 }
 
 .contact-section::after {
-  content: "";
+  content: '';
   position: absolute;
 
   transform: rotate(30deg);
   background-image: url();
-  background: url("/public/Images/paw--big.png") 0 0 no-repeat;
+  background: url('/public/Images/paw--big.png') 0 0 no-repeat;
   /* background-position: center; */
   background-size: 100px auto;
   width: 20%;
@@ -375,27 +377,14 @@ a:hover {
   padding: 1rem 0;
 }
 
-.contact--home {
-  padding: 1rem 2.5rem;
-  background-color: #a7c7cc;
-  height: 25rem;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
 .contact--form {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  max-width: 45%;
-  position: relative;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: flex-end;
+  padding-right: 2rem;
+  /* position: relative; */
+  max-width: 95%;
+  gap: 1.25rem;
+  align-items: end;
 }
 
 .input--container {
@@ -411,7 +400,7 @@ form {
   border: 0;
   /* margin-left: 1rem; */
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   outline: none;
   font-size: 1rem;
 }
@@ -420,29 +409,37 @@ input:focus {
   background-color: lightyellow;
 }
 
-textarea {
-  width: 100%;
+.contact--form textarea {
+  max-width: 100%;
   font-size: 1rem;
   height: 5rem;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+  /* display: block; */
+  width: 100%;
+  max-width: 100%;
+  font-size: 1rem;
+  height: 5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
 }
 
 #btn--submit {
-  width: 90%;
+  max-width: 100%;
   background-color: #0e3b43;
   color: #fff;
   font-weight: 700;
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  margin: auto;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  padding: 0.5rem 2rem;
   border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  justify-self: center;
+  font-family: 'Poppins', sans-serif;
   border: none;
 }
 
@@ -473,8 +470,8 @@ textarea:focus {
 
 .contact--map {
   max-width: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
 }
 
 /* FOOTER SECTION 123*/
@@ -597,13 +594,13 @@ footer ul {
   /* font-weight: 600; */
 }
 
-input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
+input[type='checkbox'] {
+  width: 1.25rem;
+  height: 1.25rem;
   margin-right: 0.5rem;
 }
 
-input[type="file"]::file-selector-button {
+input[type='file']::file-selector-button {
   border: 2px solid #c9dadc;
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
@@ -612,11 +609,11 @@ input[type="file"]::file-selector-button {
   font-weight: 600;
   width: 50%;
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   /* color: #fff; */
 }
 
-input[type="option"]::file-selector-button {
+input[type='option']::file-selector-button {
   border: 2px solid #c9dadc;
   padding: 0.2em 0.75em;
   border-radius: 0.2em;
@@ -633,31 +630,26 @@ input[type="option"]::file-selector-button {
   border: 0;
   border-radius: 5px;
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   outline: none;
 }
 
 .three--cols label,
 .pet--info--section label,
-.contact--home label {
+.contact--form label {
   display: inline-block;
   font-weight: 600;
   color: #0e3b43;
-  width: 95px;
+  width: 5.75rem;
   text-align: left;
 }
 
 .left {
-  padding-left: 25px;
+  padding-left: 1.25rem;
 }
 
 #address {
   width: 45.85rem;
-}
-
-.past--vet {
-  display: flex;
-  flex-direction: column;
 }
 
 .pet-name,
@@ -717,4 +709,187 @@ input[type="option"]::file-selector-button {
   font-size: 1.5rem;
   margin-top: 2rem;
   border-radius: 10px;
+}
+
+@media (max-width: 43.75rem) {
+  .hero--section {
+    background-image: url('/public/Images/surgery-banner.jpeg');
+  }
+
+  .nav--container {
+    display: none;
+  }
+
+  .hero--text {
+    background-color: #a7c7ccbb;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    width: 95%;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: 0.5rem;
+  }
+
+  .hero--content p {
+    font-size: 1.5rem;
+  }
+
+  .contact--form label {
+    width: 4rem;
+  }
+
+  .contact--form textarea {
+    width: 92%;
+  }
+
+  #btn--submit {
+    display: block;
+    width: 92%;
+    margin-bottom: 3rem;
+  }
+
+  .input--box {
+    width: 25rem;
+    z-index: 1000;
+  }
+
+  .contact-box {
+    gap: 0.5rem;
+    width: 90%;
+    flex-direction: column;
+
+    align-items: center;
+    padding-left: 2rem;
+  }
+
+  p.hero--content {
+    font-size: 1.15rem;
+  }
+
+  .service--section {
+    background-size: 75%;
+    background-position: center;
+  }
+
+  .service--description {
+    font-size: 0.95rem;
+  }
+
+  .service--card {
+    width: 45%;
+  }
+
+  .testimonial--text {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .Testimonial--card {
+    width: 45%;
+    margin-bottom: 4rem;
+    padding: 0.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .testimonial--box {
+    padding-bottom: 4rem;
+  }
+
+  .testimonial-contact {
+    gap: 0.5rem;
+  }
+
+  .testimonial--name {
+    font-size: 1rem;
+  }
+
+  .testimonial--img {
+    width: 80%;
+  }
+  .team--cards {
+    width: 40%;
+    padding: 1rem;
+  }
+
+  .team--dr--name {
+    font-size: 1.25rem;
+  }
+  .team--dr-title {
+    font-size: 1rem;
+  }
+
+  .team--img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .btn--nav {
+    font-size: 1rem;
+  }
+
+  .nav--container ul {
+    letter-spacing: 1px;
+
+    gap: 1.5rem;
+    font-size: 1.25em;
+    font-weight: 800;
+    align-items: center;
+    padding-right: 2em;
+  }
+
+  .header--logo {
+    padding: 0.75em;
+    margin-right: auto;
+    width: 12rem;
+    cursor: pointer;
+  }
+  .contact {
+    padding: 0.5rem;
+    margin-left: -1rem;
+  }
+
+  footer {
+    gap: 1.75rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+
+  .footer--hours {
+    width: 55%;
+  }
+
+  .footer--menu {
+    width: 55%;
+  }
+
+  .footer--location {
+    width: 25%;
+  }
+
+  .footer--contact {
+    width: 25%;
+  }
+
+  .contact-section::after {
+    top: 10%;
+    right: 15%;
+  }
+}
+
+@media (max-width: 31.25rem) {
+  .team--img {
+    width: 300px;
+    height: 400px;
+  }
+
+  .hero--text {
+    border-radius: 2rem;
+    width: 70%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+  }
 }

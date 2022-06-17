@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Form from './Form'
 
-export default function AddInfo() {
+export default function AddInfo(props) {
   const [textAdd, setTextAdd] = useState('')
   const [uploadphoto, setUploadPhoto] = useState('')
   const [visitreason, setVisitReason] = useState('')
@@ -16,6 +16,57 @@ export default function AddInfo() {
 
   const addNewBtn = ''
   const submitBtn = ''
+
+  function PetFactory(muzzle, isAggressive) {
+    return {
+      id: props.pets.length + 1,
+      muzzle,
+      isAggressive,
+      // name,
+      // species,
+      // age,
+      // breed,
+    }
+  }
+
+  function addAnotherPet(e) {
+    const pets = props.pets
+    props.setPets([...pets, new PetFactory()])
+    console.log(pets)
+    e.preventDefault()
+  }
+
+  function submitHandler(e) {
+    const encode = (data) => {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&')
+    }
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'register-pet',
+        textAdd,
+        uploadphoto,
+        visitreason,
+        referred,
+        isfriend,
+        willbite,
+        hides,
+        extrahands,
+        sedation,
+        pet: props.pet,
+      }),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error))
+
+    e.preventDefault()
+  }
 
   return (
     <section className='add--info--section'>
@@ -149,8 +200,15 @@ export default function AddInfo() {
           For additional pets please click the New Pet button below.
         </p>
         <div className='Register--btn'>
-          <p className='btn add--new'>ADD PET</p>
-          <p className='btn add--submit'>SUBMIT</p>
+          <p onClick={addAnotherPet} className='btn add--new'>
+            ADD ANOTHER PET
+          </p>
+          <input
+            className='btn add--submit'
+            type='submit'
+            value='Submit'
+            onClick={submitHandler}
+          />
         </div>
       </Form>
     </section>
